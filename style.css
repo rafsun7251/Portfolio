@@ -646,8 +646,8 @@ button, input, textarea {
 /* ---------- Projects ---------- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
 }
 
 .project-simple .project-body {
@@ -684,7 +684,7 @@ button, input, textarea {
 
 .project-image {
   position: relative;
-  height: 190px;
+  height: 210px;
   background: var(--navy-800);
   overflow: hidden;
 }
@@ -776,7 +776,39 @@ button, input, textarea {
   margin-top: auto;
   align-self: flex-start;
 }
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 
+.project-actions .btn {
+  margin-top: 0;
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--navy-800);
+  border: 2px solid var(--gray-300);
+}
+
+.btn-outline-dark:hover {
+  background: var(--gray-100);
+  border-color: var(--gray-400);
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 /* ---------- Research ---------- */
 .interest-grid {
   display: grid;
@@ -1182,7 +1214,9 @@ button, input, textarea {
   .edu-grid {
     grid-template-columns: 1fr;
   }
-
+  .certifications-grid {
+  grid-template-columns: 1fr;
+}
   .info-row {
     grid-template-columns: 1fr;
     gap: 0.2rem;
@@ -1236,4 +1270,88 @@ button, input, textarea {
     opacity: 1;
     transform: none;
   }
+}
+/* ---------- Certifications ---------- */
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+}
+
+.certification-card {
+  display: flex;
+  gap: 1.1rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.cert-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+.cert-content {
+  flex: 1;
+}
+
+.cert-platform {
+  margin-bottom: 0.35rem;
+  color: var(--blue-600);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-content h3 {
+  margin-bottom: 0.55rem;
+  color: var(--navy-900);
+}
+
+.cert-content p:not(.cert-platform) {
+  color: var(--gray-600);
+  font-size: 0.92rem;
+}
+
+.cert-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cert-year {
+  color: var(--gray-500);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cert-link {
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  color: var(--blue-700);
+  text-decoration: underline;
 }
