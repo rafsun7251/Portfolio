@@ -800,14 +800,16 @@ button, input, textarea {
 }
 
 .project-status {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  background: var(--blue-100);
-  color: var(--blue-700);
-  font-size: 0.8rem;
-  font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    align-self: flex-start;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: var(--blue-100);
+    color: var(--blue-700);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 /* ---------- Research ---------- */
 .interest-grid {
@@ -916,6 +918,13 @@ button, input, textarea {
   background: var(--white);
   color: var(--gray-700);
   border: 1px solid var(--gray-200);
+}
+.survey-card {
+    margin-bottom: 1.5rem;
+}
+
+.survey-card:last-child {
+    margin-bottom: 0;
 }
 
 .survey-card h3 { color: var(--navy-900); }
